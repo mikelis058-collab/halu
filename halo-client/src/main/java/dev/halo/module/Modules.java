@@ -66,7 +66,7 @@ public final class Modules {
     }
 
     static boolean validTarget(Entity e, boolean players, boolean hostile, boolean passive) {
-        MinecraftClient mc = mc();
+        MinecraftClient mc = MinecraftClient.getInstance();
         if (!(e instanceof LivingEntity le) || e == mc.player || !le.isAlive() || e instanceof ArmorStandEntity || le.isSpectator()) return false;
         if (e instanceof PlayerEntity) return players;
         if (e instanceof Monster) return hostile;
