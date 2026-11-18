@@ -17,7 +17,8 @@ jobs:
           java-version: '21'
 
       - name: Make Gradle wrapper executable
-        run: chmod +x ./halo-client/gradlew
+        run: chmod +x ./gradlew
+        working-directory: halo-client
         
       - name: Build with Gradle
         working-directory: halo-client
