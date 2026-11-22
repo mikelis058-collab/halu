@@ -86,7 +86,7 @@ public abstract class Module {
         this.name = name; this.description = description; this.category = category;
     }
 
-   protected static Minecraftclient mc() { return MinecraftClient.getInstance() ; }
+   protected static MinecraftClient mc() { return MinecraftClient.getInstance() ; }
 
     protected Bool bool(String n, boolean d) { Bool b = new Bool(n, d); settings.add(b); return b; }
     protected Num num(String n, double min, double max, double def, double step) { Num x = new Num(n, min, max, def, step); settings.add(x); return x; }
